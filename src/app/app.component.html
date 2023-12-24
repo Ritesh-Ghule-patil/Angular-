@@ -8,9 +8,12 @@
 
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">change first element</button>
+      <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy </button>
       <app-server-element 
       *ngFor="let ele of serverElements"
-      [parElement]="ele">
+      [parElement]="ele"
+      [name]="ele.name">
     
       <p>
         <strong *ngIf="ele.type==='server'" style="color:red">

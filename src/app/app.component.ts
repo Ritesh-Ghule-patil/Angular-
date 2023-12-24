@@ -24,6 +24,14 @@ onBlueprintAdded(blueprintData :{serverName:string, serverContent:string}) {
   });
 }
 
-
+  onChangeFirst() {
+    this.serverElements[0].name = 'changed!';
+  }
+  
+  onDestroyFirst() {
+    // console.log(this.serverElements.length);
+    this.serverElements.pop();
+    // console.log(this.serverElements.length);
+  }
 
 }
